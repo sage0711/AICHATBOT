@@ -11,7 +11,8 @@ from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import load_model
 
-
+# WordNetLemmatizer is a class from the NLTK(Natural Language Toolkit)
+# Finds the lemma of word(e.g. geese => goose, running => run)
 lemmatizer = WordNetLemmatizer()
 
 intents = json.loads(open('intents.json').read())
