@@ -17,11 +17,15 @@ lemmatizer = WordNetLemmatizer()
 
 intents = json.loads(open('intents.json').read())
 
+# Collects dictionary data
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
+# Keras load_model()
 model = load_model('chatbotmodel.h5')
 
+# 
 def clean_up_sentence(sentence):
+    # Separates sentence into individual words
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word)  for word in sentence_words]
     return sentence_words
