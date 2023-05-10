@@ -23,7 +23,7 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 # Keras load_model()
 model = load_model('chatbotmodel.h5')
 
-# 
+# Transform a given sentence into a list of lemmatized words
 def clean_up_sentence(sentence):
     # Separates sentence into individual words
     sentence_words = nltk.word_tokenize(sentence)
