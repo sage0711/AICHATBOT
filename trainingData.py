@@ -1,17 +1,21 @@
 ### Author: Riya Nakarmi ###
 ### College Project ###
 
-import random
-import json
-import pickle
-import numpy as np
+import random  # Python standard library module that provides functions for generating random numbers
+import json # Works with JSON data
+import pickle # Converts a Python object hierarchy to a byte stream
+import numpy as np # A popular numerical computing library that enables users to work with large, multi-dimensional arrays and matrices in Python.
 
-import nltk
-from nltk.stem import WordNetLemmatizer
+import nltk # Natural Language Processing Library
+from nltk.stem import WordNetLemmatizer # Process of reducing inflected forms to base or root form
 
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Activation, Dropout
-from tensorflow.keras.optimizers import SGD
+from tensorflow.keras.models import Sequential # Imports Keras deep learning framework from TensorFlow.
+#A model type that allows to build deep learning models layer by layer.
+from tensorflow.keras.layers import Dense, Activation, Dropout 
+#Dense: Most commonly used neural network layer type, it's essentially a fully connected layer where 
+# every neuron is connected to every other neuron in the previous layer.
+# Actiation: A layer type taht specifies an activation function for the output of the previous layer.
+from tensorflow.keras.optimizers import SGD # Stochastic gradient descent, an optimization algorithm used for training deep learning models
 
 lemmatizer = WordNetLemmatizer()
 
