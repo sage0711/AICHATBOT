@@ -39,7 +39,9 @@ words = sorted(set(words))
 
 classes = sorted(set(classes))
 
+# Serializes words into binary format using wb mode
 pickle.dump(words, open('words.pkl', 'wb'))
+# Serializes classes into binary format using wb mode
 pickle.dump(classes, open('classes.pkl', 'wb'))
 
 training = []
