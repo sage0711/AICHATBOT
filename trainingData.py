@@ -26,6 +26,7 @@ classes = []
 documents = []
 ignore_letters = ['?', '!',',','.']
 
+# Prepares the input data for use in training an NLP model.
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         word_list = nltk.word_tokenize(pattern)
