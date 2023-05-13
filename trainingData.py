@@ -26,6 +26,7 @@ classes = []
 documents = []
 ignore_letters = ['?', '!',',','.']
 
+# Prepares the input data for use in training an NLP model.
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         word_list = nltk.word_tokenize(pattern)
@@ -39,7 +40,9 @@ words = sorted(set(words))
 
 classes = sorted(set(classes))
 
+# Serializes words into binary format using wb mode
 pickle.dump(words, open('words.pkl', 'wb'))
+# Serializes classes into binary format using wb mode
 pickle.dump(classes, open('classes.pkl', 'wb'))
 
 training = []
